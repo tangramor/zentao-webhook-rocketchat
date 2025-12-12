@@ -1,4 +1,6 @@
-# 禅道 WebHook 的 RocketChat 集成支持
+**[English Version](./README.en_US.md)**
+
+# 禅道 Webhook 的 RocketChat 集成支持
 
 禅道（这里仅限于社区版）本身只支持有限的即时聊天工具（IM）对接：
 
@@ -12,6 +14,11 @@
 在开发工作中及时收到任务或缺陷的消息还是很重要的。于是就引出了如何将禅道和 RocketChat 对接起来的需求，这样在禅道里的重要操作，都能即时通知到 RocketChat 聊天工具里。
 
 因为 RocketChat 本身支持集成 Webhook ，这样我们其实基于禅道 Webhook 功能添加一个 RocketChat 渠道就可以了。
+
+
+## 0. 太长不看版
+
+本项目代码就是基于禅道社区版 21.7.5 版本的 **Webhook** 模块，添加了 RocketChat Webhook 的支持，可以直接使用。备份好原版 Webhook 目录，用本项目代码替换即可。如果禅道版本不同，请自行修改代码。
 
 
 ## 1. 开发、测试环境
@@ -61,7 +68,7 @@ docker run -it -d \
 
 ![:/8f68346c66ee429498052e8d27a34819](./docs/images/5f1dddfe637f8952faff1dab9d30ff34.png)
 
-因为要修改禅道的 WebHook 实现代码，所以我们还需要获取禅道社区版的源代码：
+因为要修改禅道的 Webhook 实现代码，所以我们还需要获取禅道社区版的源代码：
 
 ```bash
 git clone --branch zentaopms_21.7.5_20250911 https://github.com/easysoft/zentaopms.git
@@ -571,7 +578,7 @@ curl -H 'X-Auth-Token: z6pD9UOCSWJ83lnMMO4ZqzuN4IaKh-I2b0NMZPyvoCB' -H 'X-User-I
 
 ### 4.5. 测试
 
-在禅道的 WebHook 界面，点击之前创建的 Hook 条目右侧操作栏里面的链接图标：
+在禅道的 Webhook 界面，点击之前创建的 Hook 条目右侧操作栏里面的链接图标：
 
 ![:/2225474bf10443deb6e71ae981c6f66a](./docs/images/030db0d5-01f6-4edf-8bf1-d14dda124a88.png)
 
