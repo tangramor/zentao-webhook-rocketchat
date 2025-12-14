@@ -66,7 +66,7 @@ docker run -it -d \
 
 After installation, check **Notification Settings** in the admin panel to see supported **Webhooks**:
 
-![:/8f68346c66ee429498052e8d27a34819](./docs/images/5f1dddfe637f8952faff1dab9d30ff34.png)
+![:/8f68346c66ee429498052e8d27a34819](./docs/images/2025-12-13_14-16.png)
 
 To modify Zentao's Webhook code, obtain the community edition source code:
 
@@ -108,21 +108,21 @@ Go to **Administration** >> **General** >> **UTF8** and set:
 [\u4e00-\u9fa50-9a-zA-Z-_.]+
 ```
 
-![:/f1aa36d48c744af2911659429d894c20](./docs/images/a8f5d993d54441f1250f63e75d290d83.png)
+![:/f1aa36d48c744af2911659429d894c20](./docs/images/2025-12-13_14-20-14.png)
 
 ### Create Webhook
 
-![:/5c9689fcc5c6464fb6f4de79be8e73d6](./docs/images/17d80eb5493e993081d1d8532ab5a12e.png)
+![:/5c9689fcc5c6464fb6f4de79be8e73d6](./docs/images/2025-12-13_14-23-25.png)
 
-![:/ccaf2d779b044a7a9c5a2b323546fbae](./docs/images/bf6e6ce6ed1a83fb4f1b4cb3ea4f7679.png)
+![:/ccaf2d779b044a7a9c5a2b323546fbae](./docs/images/2025-12-13_14-25-22.png)
 
 Note: The channel must be created in advance. If using another user as the webhook sender, that user must also exist. Enable `Allow to overwrite destination channel in the body parameters` so messages can be sent to specified channels or users via parameters.
 
-![:/e5d21e01fae64be88e0778b4fad2baf1](./docs/images/0fe35d193388dc39f21167eda00a699d.png)
+![:/e5d21e01fae64be88e0778b4fad2baf1](./docs/images/2025-12-13_14-28-04.png)
 
-After saving, this webhook can be used. Note that the IP in the URL should be the host's IP, not 127.0.0.1, because requests from the Zentao container to the RocketChat server cannot reach 127.0.0.1.
+After saving, this webhook can be used.
 
-![:/ea3e94a4fc1f43e88bee3608bb570ed6](./docs/images/dd2d17129363a96a880fa9cd2df91292.png)
+![:/ea3e94a4fc1f43e88bee3608bb570ed6](./docs/images/2025-12-13_14-29-27.png)
 
 You can test directly using the provided example:
 
@@ -509,17 +509,15 @@ Find two places with `if(strpos(` and add `rocketchannel` condition:
 
 ### 3.2. Add RocketChat Webhook to Zentao
 
-![:/a6090c1c863d47cda8ed5b3338c7937f](./docs/images/0a31014f2c856232b308b722645feea3.png)
+![:/a6090c1c863d47cda8ed5b3338c7937f](./docs/images/2025-12-14_16-05.png)
 
 Then, find any bug or task and add a comment:
 
-![:/94e24a937b8549bcb8d9872b24ea087f](./docs/images/6f3c2adfde929bacc3622848e46d3c6d.png)
+![:/94e24a937b8549bcb8d9872b24ea087f](./docs/images/2025-12-14_16-07.png)
 
 You will receive the notification in the configured RocketChat channel:
 
-![:/29b6636940df447e8814e45443d776c2](./docs/images/fb9a005f2c4513db2a854e4ef0d57fc8.png)
-
-![:/f44a78c5da094052a7118f3f090b5aef](./docs/images/5e3b0ef3b51d51c82b0e833d0ab9544f.png)
+![:/29b6636940df447e8814e45443d776c2](./docs/images/2025-12-14_16-13.png)
 
 
 ## 4. Direct Notification to Users
@@ -536,15 +534,15 @@ For security, create a dedicated user (e.g., `zentao`) in RocketChat for sending
 
 Use the `zentao` user to send messages:
 
-![:/209eaffd031044dfa70bd4c48a476bb7](./docs/images/4ad8aaaebd10d691e51580eb231d2df9.png)
+![:/209eaffd031044dfa70bd4c48a476bb7](./docs/images/2025-12-14_16-16.png)
 
 ### 4.3. Obtain RocketChat User API Token
 
-![:/1d9a531375d44f42a7920e7993f575e9](./docs/images/934f9f42d2687787e13d37af30c12c35.png)
+![:/1d9a531375d44f42a7920e7993f575e9](./docs/images/2025-12-14_16-18.png)
 
-![:/bd78c9d4ddd3478899ba729d14c817c7](./docs/images/7c3c6283d9b9b95c405310bae4ceadaf.png)
+![:/bd78c9d4ddd3478899ba729d14c817c7](./docs/images/2025-12-14_16-19.png)
 
-![:/0e41c31a545d4a5abd5edb4634e88508](./docs/images/9ac046bd86f5f5a5027d69f481454f61.png)
+![:/0e41c31a545d4a5abd5edb4634e88508](./docs/images/2025-12-14_16-20.png)
 
 The API to use: https://developer.rocket.chat/apidocs/get-users-list
 
@@ -579,15 +577,15 @@ The specific code is reflected in the project and not listed here in detail.
 
 In Zentao's Webhook UI, click the link icon in the operation column of the previously created Hook entry:
 
-![:/2225474bf10443deb6e71ae981c6f66a](./docs/images/030db0d5-01f6-4edf-8bf1-d14dda124a88.png)
+![:/2225474bf10443deb6e71ae981c6f66a](./docs/images/2025-12-14_16-22.png)
 
 You can bind existing Zentao users and RocketChat users:
 
-![:/09c49f8027d54e6c8b4b0cc8c0216cb9](./docs/images/9281b46c-aa57-40e1-b94b-26fc83895d6e.png)
+![:/09c49f8027d54e6c8b4b0cc8c0216cb9](./docs/images/2025-12-14_16-22_1.png)
 
 Then, find any bug or task, add a comment, and check if it can be sent to the specified user:
 
-![:/1cdf0202f8274fd9baeff73a6403cd9f](./docs/images/d3744671-59ad-4e4e-9c56-7e7f6841c9e7.png)
+![:/1cdf0202f8274fd9baeff73a6403cd9f](./docs/images/2025-12-14_16-33.png)
 
 
 ## 5. Summary

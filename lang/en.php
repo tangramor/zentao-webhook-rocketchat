@@ -111,3 +111,13 @@ $lang->webhook->error               = new stdclass();
 $lang->webhook->error->curl         = 'Load php-curl in php.ini.';
 $lang->webhook->error->noDept       = 'There is no department selected. Please choose department first.';
 $lang->webhook->error->requestError = 'Request error!';
+
+$lang->webhook->typeList['rocketchannel']     = 'RocketChat Channel';
+$lang->webhook->rocketChannel = 'Channel';
+$lang->webhook->note->rocketChannel = 'Enter RocketChat channel name without # prefix, multiple channels separated by comma.';
+$lang->webhook->note->typeList['rocketchannel'] = 'Add an integration in RocketChat and fill in its webhook here.';
+$lang->webhook->rocketUserid = 'RocketChat User';
+$lang->webhook->rocketBindStatus = 'RocketChat Bind Status';
+$lang->webhook->rocketXAuthToken = 'X-Auth-Token';
+$lang->webhook->rocketXUserId   = 'X-User-Id';
+
